@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Country } from "../../models/models";
+import { Country } from "../models/models";
 import { ListGroup } from "react-bootstrap";
 
 export function Countries() {
