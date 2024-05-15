@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
-import { Countries } from "./pages/Countries/Countries";
+import { Countries } from "./pages/Countries";
 import { NotFound } from "./pages/NotFound/NotFound";
-import { CountryDetail } from "./pages/CountryDetail/CountryDetail";
+import { CountryDetail } from "./pages/CountryDetail";
 
 function App() {
   return (

@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
-// import s from "./Countries.module.css";
 import axios from "axios";
-import { Country } from "../../models/models";
-import { Link } from "react-router-dom";
+import { Country } from "../models/models";
+import { ListGroup } from "react-bootstrap";
 
 export function Countries() {
   const [countries, setCountries] = useState<Country[]>([]);
@@ -21,17 +20,20 @@ export function Countries() {
   }, []);
 
   return (
-    <div>
-      <h1>Страны</h1>
-      <ul>
+    <div className="m-sm-3 m-lg-3 d-flex justify-content-center flex-direction-column">
+      <ListGroup>
+        <h1 className="display-4 text-center my-5 text-danger">Countries</h1>
+
         {countries.map((country) => (
-          <li key={Math.random()}>
-            <Link to={`/country/${country.name.common}`}>
-              {(country as Country)?.name.common}
-            </Link>
-          </li>
+          <ListGroup.Item
+            key={Math.random()}
+            action
+            href={`/country/${country.name.common}`}
+          >
+            {(country as Country)?.name.common}
+          </ListGroup.Item>
         ))}
-      </ul>
+      </ListGroup>
     </div>
   );
 }
