@@ -1,0 +1,10 @@
+.container {
+  background-color: blueviolet;
+}
+
+.title{
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+}
